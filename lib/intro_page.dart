@@ -19,7 +19,7 @@ class IntroPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(25.0),
                 child: Image.asset(
-                  'lib/images/lol.png',
+                  "lib/images/lol.png",
                   height: 240,
                 ),
               ),
@@ -28,7 +28,7 @@ class IntroPage extends StatelessWidget {
 
               // title
               const Text(
-                'Les Do It',
+                'Lol toy shop',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
@@ -59,13 +59,13 @@ class IntroPage extends StatelessWidget {
                 ),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.grey[900],
+                    color: Colors.yellow[900],
                     borderRadius: BorderRadius.circular(12),
                   ),
                   padding: const EdgeInsets.all(25),
                   child: const Center(
                     child: Text(
-                      'read now',
+                      'shop now',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,

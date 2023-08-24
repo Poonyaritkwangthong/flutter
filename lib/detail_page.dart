@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'components/shoe_tile.dart';
 import 'models/shoe.dart';
+import 'models/trick.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({super.key});
@@ -11,9 +13,22 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
+  // add champion to cart
+  void addChampionToCart(Shoe shoe){
+    Provider.of<Cart>(context, listen: false).addItemToCrat(shoe);
+
+    // aleat the user, champion successfully added
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Successfully added!'),
+        content: Text('Check your cart'),
+      ),
+    );
+  }
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Consumer<Cart>(builder: (context, value, child) => Column(
       children: [
         // search bar
         Container(
@@ -55,7 +70,7 @@ class _DetailPageState extends State<DetailPage> {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: const [
               Text(
-                'Hot Picks',
+                'Hot Champion',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 24,
@@ -72,19 +87,19 @@ class _DetailPageState extends State<DetailPage> {
 
         const SizedBox(height: 10),
 
+        //list of champion
         Expanded(
           child: ListView.builder(
             itemCount: 4,
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
-              // create a champion
-              Shoe shoe = Shoe(
-                  name: 'veigar',
-                  detail: 'champion',
-                  description: 'cute champion',
-                  imagePath: 'lib/images/veigar.png');
+              // get a champion from shop list
+              Shoe shoe = value.getShoeList()[index];
+
+                  //return the champion
               return ShoeTile(
                 shoe: shoe,
+                onTap: () => addChampionToCart(shoe),
               );
             },
           ),
@@ -97,6 +112,7 @@ class _DetailPageState extends State<DetailPage> {
           ),
         ),
       ],
-    );
+    ),
+  );
   }
 }

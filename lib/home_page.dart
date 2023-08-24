@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
         onTabChange: (index) => navigateBottomBar(index),
       ),
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.yellow[900],
         elevation: 0,
         leading: Builder(
           builder: (context) => IconButton(
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       drawer: Drawer(
-        backgroundColor: Colors.grey[900],
+        backgroundColor: Color.fromARGB(255, 215, 160, 98),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -69,6 +69,7 @@ class _HomePageState extends State<HomePage> {
                   child: Image.asset(
                     'lib/images/lol.png',
                     color: Colors.white,
+                    
                   ),
                 ),
                 Padding(
@@ -84,11 +85,11 @@ class _HomePageState extends State<HomePage> {
                   child: ListTile(
                     leading: Icon(
                       Icons.home,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                     title: Text(
                       'Home',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.black),
                     ),
                   ),
                 ),
@@ -98,11 +99,11 @@ class _HomePageState extends State<HomePage> {
                   child: ListTile(
                     leading: Icon(
                       Icons.info,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                     title: Text(
                       'About',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.black),
                     ),
                   ),
                 ),
@@ -113,11 +114,11 @@ class _HomePageState extends State<HomePage> {
               child: ListTile(
                 leading: Icon(
                   Icons.logout,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
                 title: Text(
                   'Exit',
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black),
                 ),
               ),
             ),
