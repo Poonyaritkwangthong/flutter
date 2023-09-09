@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/trick_page.dart';
 
+import 'character.dart';
 import 'components/bottom_nav_bar.dart';
 import 'detail_page.dart';
 
@@ -30,6 +31,9 @@ class _HomePageState extends State<HomePage> {
 
     // trick
     const TrickPage(),
+
+    // Character
+    const CharacterPage(),
   ];
 
   @override
@@ -69,7 +73,6 @@ class _HomePageState extends State<HomePage> {
                   child: Image.asset(
                     'lib/images/lol.png',
                     color: Colors.white,
-                    
                   ),
                 ),
                 Padding(

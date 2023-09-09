@@ -19,12 +19,22 @@ class MyBottomNavBar extends StatelessWidget {
         onTabChange: (value) => onTabChange!(value),
         tabs: const [
           GButton(
-            icon: Icons.home, iconColor: Colors.white,
-            text: 'Read',textColor: Colors.white,
+            icon: Icons.home,
+            iconColor: Colors.white,
+            text: 'Popular',
+            textColor: Colors.white,
           ),
           GButton(
-            icon: Icons.shopping_bag_rounded,iconColor: Colors.white,
-            text: 'Champion',textColor: Colors.white,
+            icon: Icons.favorite,
+            iconColor: Colors.white,
+            text: 'Favorite character',
+            textColor: Colors.white,
+          ),
+          GButton(
+            icon: Icons.shopping_bag_rounded,
+            iconColor: Colors.white,
+            text: 'character',
+            textColor: Colors.white,
           ),
         ],
       ),

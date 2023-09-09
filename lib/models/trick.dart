@@ -3,26 +3,27 @@ import 'package:flutter/material.dart';
 import 'shoe.dart';
 
 class Cart extends ChangeNotifier {
-  // list of champion for sale
-  List<Shoe> shoeShop = [
+  // list champion for
+  List<Shoe> ShoeShop = [
     Shoe(
         name: 'veigar',
         detail: 'yordle',
-        description: 'Veigar has embraced powers that few others dare even approach',
+        description:
+            'Veigar has embraced powers that few others dare even approach',
         imagePath: 'lib/images/veigar.png'),
     Shoe(
         name: 'zet',
-        detail:'',
+        detail: '',
         description: '',
         imagePath: 'lib/images/zett.png'),
-      Shoe(
+    Shoe(
         name: 'nunu',
-        detail:'',
+        detail: '',
         description: '',
         imagePath: 'lib/images/nunu.png'),
-      Shoe(
+    Shoe(
         name: 'jax',
-        detail:'',
+        detail: '',
         description: '',
         imagePath: 'lib/images/jax.png'),
   ];
@@ -31,7 +32,7 @@ class Cart extends ChangeNotifier {
 
   // get list of trick
   List<Shoe> getShoeList() {
-    return shoeShop;
+    return ShoeShop;
   }
 
   // add items to champion
